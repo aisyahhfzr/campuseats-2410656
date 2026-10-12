@@ -1,6 +1,6 @@
 function VendorCard() {
 const vendor = {
-name: 'Cafe Mahallah Ali',
+name: 'Mahallah Ali Cafe',
 location: 'Mahallah Ali, Block C',
 openHours: '7:00 am - 10:00 pm',
 isOpen: true,
