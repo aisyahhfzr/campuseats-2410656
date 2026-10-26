@@ -1,0 +1,314 @@
+[
+  {
+    "id": "2410656-Malatang Aisyah",
+    "name": "Aisyah's Kitchen",
+    "location": "Mahallah Maryam, Block D",
+    "openHours": "9:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2410656-m1",
+        "name": "Spicy Mala",
+        "description": "Noodles cooked in spicy mala sauce",
+        "price": 10,
+        "category": "Noodles",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410656-m2",
+        "name": "Fried Noodles",
+        "description": "Fried noodles cooked in soy sauce",
+        "price": 7,
+        "category": "Noodles",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410656-m3",
+        "name": "Curry Mee",
+        "description": "Noodles cooked in curry saunce",
+        "price": 15,
+        "category": "Drinks",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410656-m4",
+        "name": "Ayam Gepuk",
+        "description": "Chicekn served with rice and gepuk sambal",
+        "price": 12,
+        "category": "Rice",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410656-m5",
+        "name": "Chicken Rice",
+        "description": "Chicken rice served with soup",
+        "price": 10,
+        "category": "Rice",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410656-m6",
+        "name": "Nasi Kandar",
+        "description": "Rice served with curry on top and fried chicken",
+        "price": 8,
+        "category": "Rice",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410656-m7",
+        "name": "Nasi Briyani",
+        "description": "Briyani rice served with chicken and papadem",
+        "price": 12,
+        "category": "Rice",
+        "available": true
+      },
+      {
+        "id": "2410656-m8",
+        "name": "Spaghetti Bolognese",
+        "description": "Homemade pasta with bolognese sauce",
+        "price": 10,
+        "category": "Noodles",
+        "available": true
+      },
+      {
+        "id": "2410656-m9",
+        "name": "Nasi Kukus",
+        "description": "Steamed rice served with delicious sauce",
+        "price": 9,
+        "category": "Rice",
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "2410350-shawarma-house",
+    "name": "Shawarma House",
+    "location": "Mahallah Halimah, Block PG, Ground Floor",
+    "openHours": "7:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2410350-s-1",
+        "name": "Chicken Shawarma",
+        "description": "Grilled chicken meat in a flatbread",
+        "price": 6,
+        "category": "Sandwiches",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410350-s-2",
+        "name": "Beef Shawarma",
+        "description": "Grilled beef meat in a flatbread",
+        "price": 7,
+        "category": "Sandwiches",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410350-s-3",
+        "name": "Zinger Chicken Wrap",
+        "description": "Crispy chicken wrap with special sauce",
+        "price": 8,
+        "category": "Sandwiches",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410350-b-1",
+        "name": "Mint Lemonade",
+        "description": "Refreshing mint and lemonade blend",
+        "price": 3,
+        "category": "Drinks",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410350-b-2",
+        "name": "Yogurt Drink",
+        "description": "Creamy yogurt drink with fruit syrup",
+        "price": 4,
+        "category": "Drinks",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410350-d-1",
+        "name": "Baklava",
+        "description": "Classic Turkish dessert with nuts and honey",
+        "price": 8,
+        "category": "Desserts",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410350-d-2",
+        "name": "Kunafa",
+        "description": "Crispy pastry filled with cheese and soaked in sweet syrup",
+        "price": 8,
+        "category": "Desserts",
+        "available": true,
+        "popular": true
+      },
+      {
+        "id": "2410350-d-3",
+        "name": "Middle EasternMilk Pudding",
+        "description": "Smooth milk pudding infused with subtle rosewater, garnished with crushed nuts and a drizzle of honey.",
+        "price": 5,
+        "category": "Desserts",
+        "available": true,
+        "popular": true
+      }
+    ]
+  },
+  {
+    "id": "2414950-buburBakar-aleeya",
+    "name": "Stall Bikin Ketagih Bubur Oren",
+    "location": "Mahallah Maryam, Cafe Maryam",
+    "openHours": "10:00 am - 11:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "2414950-m1",
+        "name": "Bubur Ayam Bakar",
+        "description": "Homemade Porridge with Roasted Chicken Slices",
+        "spiceLevel": 3,
+        "price": 7.5,
+        "category": "Porridge",
+        "available": true
+      },
+      {
+        "id": "2414950-m2",
+        "name": "Bubur Daging Bakar",
+        "description": "Homemade Porridge with Roasted Beef Slices",
+        "spiceLevel": 3,
+        "price": 8,
+        "category": "Porridge",
+        "available": true
+      },
+      {
+        "id": "2414950-m3",
+        "name": "Bubur Itik Bakar",
+        "description": "Homemade Porridge with Roasted Duck Slices",
+        "spiceLevel": 3,
+        "price": 9,
+        "category": "Porridge",
+        "available": true
+      },
+      {
+        "id": "2414950-m5",
+        "name": "Bubur Itik Salai",
+        "description": "Homemade porridge with Smoked Duck Slices",
+        "spiceLevel": 3,
+        "price": 9,
+        "category": "Porridge",
+        "available": true
+      },
+      {
+        "id": "2414950-d1",
+        "name": "Teh Limau Ais",
+        "description": "Refreshing Lemon Tea with Ice",
+        "price": 2.5,
+        "category": "Drinks",
+        "available": true
+      },
+      {
+        "id": "2414950-d2",
+        "name": "Air Bandung Ais",
+        "description": "Sweet and milky rose-syrup with Ice",
+        "price": 2.5,
+        "category": "Drinks",
+        "available": true
+      },
+      {
+        "id": "2414950-d3",
+        "name": "Matcha Latte Ais",
+        "description": "Matcha brewed with Milk with Ice and Whipped Cream Topping",
+        "price": 5,
+        "category": "Drinks",
+        "available": true
+      },
+      {
+        "id": "2414950-d4",
+        "name": "Spanish Latte Ais",
+        "description": "Arabica Bean Aroma brewed with Milk with Ice and Whipped Cream Topping",
+        "price": 5,
+        "category": "Drinks",
+        "available": true
+      },
+      {
+        "id": "2414950-d5",
+        "name": "Mojito Blue",
+        "description": "Sparkling Blue Mojito with Mint and Lemon, with Ice",
+        "price": 4.5,
+        "category": "Drinks",
+        "available": true
+      },
+      {
+        "id": "2414950-de1",
+        "name": "Tau Foo Fah",
+        "description": "Silky Tofu Pudding Dessert with Palm Sugar",
+        "price": 3,
+        "category": "Dessert",
+        "available": true
+      },
+      {
+        "id": "2414950-de2",
+        "name": "Aiyu Jelly",
+        "description": "Refreshing Jelly wtih Honey and Lemon",
+        "price": 4,
+        "category": "Dessert",
+        "available": true
+      },
+      {
+        "id": "2414950-de3",
+        "name": "Mochi Bites",
+        "description": "10 pcs Smooth and Chewy Mini Mochi with Red Bean Paste",
+        "price": 10,
+        "category": "Dessert",
+        "available": true
+      },
+      {
+        "id": "2414950-de4",
+        "name": "Power Cream Puff",
+        "description": "6 pcs Fluffy Cream Puffs with Whipped Cream Filling",
+        "price": 10,
+        "category": "Dessert",
+        "available": true
+      },
+      {
+        "id": "2414950-a1",
+        "name": "Extra Sambal Homemade",
+        "description": "Secret Homemade Sambal Sauce",
+        "spiceLevel": 5,
+        "price": 1,
+        "category": "Add-On",
+        "available": true
+      },
+      {
+        "id": "2414950-a2",
+        "name": "Sambal Nyet KA",
+        "description": "Khairul Aming's Iconic Sound Sauce",
+        "spiceLevel": 4,
+        "price": 1.5,
+        "category": "Add-On",
+        "available": true
+      },
+      {
+        "id": "2414950-a3",
+        "name": "Sambal Mala",
+        "description": "Sichuan-style Mala Sambal Sauce",
+        "spiceLevel": 3,
+        "price": 1.5,
+        "category": "Add-On",
+        "available": true
+      }
+    ]
+  }
+]
