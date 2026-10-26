@@ -14,3 +14,4 @@ Answer each question in 1–3 sentences, in your own words.
 
 4. Name one benefit of splitting the UI into small components.
 -Improves code reusability and makes your code easier to maintain, test, and debug.
+
