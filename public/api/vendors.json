@@ -13,7 +13,8 @@
         "price": 10,
         "category": "Noodles",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Vegan", "Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410656-m2",
@@ -22,25 +23,28 @@
         "price": 7,
         "category": "Noodles",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Vegetarian", "Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410656-m3",
         "name": "Curry Mee",
-        "description": "Noodles cooked in curry saunce",
+        "description": "Noodles cooked in curry sauce",
         "price": 15,
         "category": "Drinks",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410656-m4",
         "name": "Ayam Gepuk",
-        "description": "Chicekn served with rice and gepuk sambal",
+        "description": "Chicken served with rice and gepuk sambal",
         "price": 12,
         "category": "Rice",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410656-m5",
@@ -49,7 +53,8 @@
         "price": 10,
         "category": "Rice",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410656-m6",
@@ -58,7 +63,8 @@
         "price": 8,
         "category": "Rice",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410656-m7",
@@ -66,7 +72,8 @@
         "description": "Briyani rice served with chicken and papadem",
         "price": 12,
         "category": "Rice",
-        "available": true
+        "available": true,
+        "tags": ["Nut-Free"]
       },
       {
         "id": "2410656-m8",
@@ -74,7 +81,8 @@
         "description": "Homemade pasta with bolognese sauce",
         "price": 10,
         "category": "Noodles",
-        "available": true
+        "available": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410656-m9",
@@ -82,7 +90,8 @@
         "description": "Steamed rice served with delicious sauce",
         "price": 9,
         "category": "Rice",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       }
     ]
   },
@@ -100,7 +109,8 @@
         "price": 6,
         "category": "Sandwiches",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410350-s-2",
@@ -109,7 +119,8 @@
         "price": 7,
         "category": "Sandwiches",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2410350-s-3",
@@ -118,7 +129,8 @@
         "price": 8,
         "category": "Sandwiches",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Nut-Free"]
       },
       {
         "id": "2410350-b-1",
@@ -127,7 +139,8 @@
         "price": 3,
         "category": "Drinks",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2410350-b-2",
@@ -136,7 +149,8 @@
         "price": 4,
         "category": "Drinks",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Vegetarian", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2410350-d-1",
@@ -145,7 +159,8 @@
         "price": 8,
         "category": "Desserts",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Vegetarian"]
       },
       {
         "id": "2410350-d-2",
@@ -154,16 +169,18 @@
         "price": 8,
         "category": "Desserts",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Vegetarian", "Nut-Free"]
       },
       {
         "id": "2410350-d-3",
-        "name": "Middle EasternMilk Pudding",
+        "name": "Middle Eastern Milk Pudding",
         "description": "Smooth milk pudding infused with subtle rosewater, garnished with crushed nuts and a drizzle of honey.",
         "price": 5,
         "category": "Desserts",
         "available": true,
-        "popular": true
+        "popular": true,
+        "tags": ["Vegetarian"]
       }
     ]
   },
@@ -181,7 +198,8 @@
         "spiceLevel": 3,
         "price": 7.5,
         "category": "Porridge",
-        "available": true
+        "available": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2414950-m2",
@@ -190,7 +208,8 @@
         "spiceLevel": 3,
         "price": 8,
         "category": "Porridge",
-        "available": true
+        "available": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2414950-m3",
@@ -199,7 +218,8 @@
         "spiceLevel": 3,
         "price": 9,
         "category": "Porridge",
-        "available": true
+        "available": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2414950-m5",
@@ -208,7 +228,8 @@
         "spiceLevel": 3,
         "price": 9,
         "category": "Porridge",
-        "available": true
+        "available": true,
+        "tags": ["Dairy-Free", "Nut-Free"]
       },
       {
         "id": "2414950-d1",
@@ -216,7 +237,8 @@
         "description": "Refreshing Lemon Tea with Ice",
         "price": 2.5,
         "category": "Drinks",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-d2",
@@ -224,7 +246,8 @@
         "description": "Sweet and milky rose-syrup with Ice",
         "price": 2.5,
         "category": "Drinks",
-        "available": true
+        "available": true,
+        "tags": ["Vegetarian", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-d3",
@@ -232,7 +255,8 @@
         "description": "Matcha brewed with Milk with Ice and Whipped Cream Topping",
         "price": 5,
         "category": "Drinks",
-        "available": true
+        "available": true,
+        "tags": ["Vegetarian", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-d4",
@@ -240,7 +264,8 @@
         "description": "Arabica Bean Aroma brewed with Milk with Ice and Whipped Cream Topping",
         "price": 5,
         "category": "Drinks",
-        "available": true
+        "available": true,
+        "tags": ["Vegetarian", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-d5",
@@ -248,7 +273,8 @@
         "description": "Sparkling Blue Mojito with Mint and Lemon, with Ice",
         "price": 4.5,
         "category": "Drinks",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-de1",
@@ -256,15 +282,17 @@
         "description": "Silky Tofu Pudding Dessert with Palm Sugar",
         "price": 3,
         "category": "Dessert",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-de2",
         "name": "Aiyu Jelly",
-        "description": "Refreshing Jelly wtih Honey and Lemon",
+        "description": "Refreshing Jelly with Honey and Lemon",
         "price": 4,
         "category": "Dessert",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-de3",
@@ -272,7 +300,8 @@
         "description": "10 pcs Smooth and Chewy Mini Mochi with Red Bean Paste",
         "price": 10,
         "category": "Dessert",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-de4",
@@ -280,7 +309,8 @@
         "description": "6 pcs Fluffy Cream Puffs with Whipped Cream Filling",
         "price": 10,
         "category": "Dessert",
-        "available": true
+        "available": true,
+        "tags": ["Vegetarian", "Nut-Free"]
       },
       {
         "id": "2414950-a1",
@@ -289,7 +319,8 @@
         "spiceLevel": 5,
         "price": 1,
         "category": "Add-On",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-a2",
@@ -298,7 +329,8 @@
         "spiceLevel": 4,
         "price": 1.5,
         "category": "Add-On",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       },
       {
         "id": "2414950-a3",
@@ -307,7 +339,8 @@
         "spiceLevel": 3,
         "price": 1.5,
         "category": "Add-On",
-        "available": true
+        "available": true,
+        "tags": ["Vegan", "Dairy-Free", "Gluten-Free", "Nut-Free"]
       }
     ]
   }

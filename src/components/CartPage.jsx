@@ -7,7 +7,7 @@ function CartPage({ cart, onChangeQty, onRemove, onPlaceOrder }) {
       <p className="muted">
         Your cart is empty. Pick something from a menu first.
       </p>
-    );
+    )
   }
 
   const total = 0; // TODO: derive with cart.reduce(...), never store it in state
@@ -29,7 +29,7 @@ function CartPage({ cart, onChangeQty, onRemove, onPlaceOrder }) {
       </div>
       <CheckoutForm onPlaceOrder={onPlaceOrder} />
     </div>
-  );
+  )
 }
 
-export default CartPage;
+export default CartPage

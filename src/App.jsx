@@ -6,22 +6,23 @@ import MenuList from "./components/MenuList.jsx"
 import CartPage from "./components/CartPage.jsx"
 import { Loading, ErrorMessage } from "./components/Status.jsx"
 
-
 function App() {
-  // Fetched data: one piece of state for each situation
   const [vendors, setVendors] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [reloadKey, setReloadKey] = useState(0) // bump it to fetch again
+  const [reloadKey, setReloadKey] = useState(0)
 
   const [selectedVendorId, setSelectedVendorId] = useState(null)
-  const [cart, setCart] = useState([]); // lines of { item, qty }
-  const [view, setView] = useState("menu") // 'menu' | 'cart' | 'done'
+  const [cart, setCart] = useState([])
+  const [view, setView] = useState("menu")
   const [lastOrder, setLastOrder] = useState(null)
+  
 
   const [searchQuery, setSearchQuery] = useState("")
+  
+  // 1. Added state for dietary tags
+  const [selectedDietaryTags, setSelectedDietaryTags] = useState([])
 
-  // Runs after the first render, and again whenever reloadKey changes.
   useEffect(() => {
     const controller = new AbortController()
     setLoading(true)
@@ -34,7 +35,6 @@ function App() {
       })
       .then((data) => {
         setVendors(data)
-        // Keep the vendor the user already picked; otherwise pick the first one.
         setSelectedVendorId((current) => current ?? data[0]?.id ?? null)
       })
       .catch((err) => {
@@ -44,56 +44,69 @@ function App() {
         if (!controller.signal.aborted) setLoading(false)
       })
 
-    return () => controller.abort() // cleanup: cancel an old request
+    return () => controller.abort()
   }, [reloadKey])
+
+  // 2. Added toggle handler for checkboxes
+  function handleToggleDietaryTag(tag) {
+    setSelectedDietaryTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    )
+  }
 
   function handleAddToCart(item) {
     setCart((prev) => {
-      const existing = prev.find((line) => line.item.id === item.id);
+      const existing = prev.find((line) => line.item.id === item.id)
       if (existing) {
-        // Already in the cart: copy every line, and add 1 to the matching one
         return prev.map((line) =>
           line.item.id === item.id ? { ...line, qty: line.qty + 1 } : line,
         )
       }
-      return [...prev, { item, qty: 1 }]; // new line
+      return [...prev, { item, qty: 1 }]
     })
   }
 
   function handleChangeQty(itemId, delta) {
-    // delta is +1 or -1
     setCart(
       (prev) =>
         prev
           .map((line) =>
             line.item.id === itemId ? { ...line, qty: line.qty + delta } : line,
-          ) //[cite: 3]
-          .filter((line) => line.qty > 0), // qty 0 means the line disappears
+          )
+          .filter((line) => line.qty > 0),
     )
   }
 
   function handleRemove(itemId) {
-    setCart((prev) => prev.filter((line) => line.item.id !== itemId)); //[cite: 3]
+    setCart((prev) => prev.filter((line) => line.item.id !== itemId))
   }
+
   function handlePlaceOrder(details) {
     const total = cart.reduce(
       (sum, line) => sum + line.item.price * line.qty,
       0,
-    ) //
-    setLastOrder({ ...details, total });
+    )
+    setLastOrder({ ...details, total })
     setCart([])
     setView("done")
   }
-  const cartCount = cart.reduce((sum, line) => sum + line.qty, 0);
-    const selectedVendor = Array.isArray(vendors) ? vendors.find((v) => v.id === selectedVendorId) : null;
 
-    // Filter menu items based on case-insensitive search
+  const cartCount = cart.reduce((sum, line) => sum + line.qty, 0)
+  const selectedVendor = Array.isArray(vendors) ? vendors.find((v) => v.id === selectedVendorId) : null
+
+  //
+  // Updated filtering logic using .some()
   const filteredMenuItems = selectedVendor?.menu
-    ? selectedVendor.menu.filter((item) =>
-        item.name.toLowerCase().includes(searchQuery.toLowerCase()),
-      )
+    ? selectedVendor.menu.filter((item) => {
+        const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase())
+        
+        const matchesTags =
+          selectedDietaryTags.length === 0 ||
+          selectedDietaryTags.some((tag) => item.tags?.includes(tag) || item.dietary?.includes(tag))
+          
+        return matchesSearch && matchesTags
+      })
     : []
-    
   let content;
   if (view === "cart") {
     content = (
@@ -130,9 +143,8 @@ function App() {
   } else {
     content = (
       <>
-        {/* your Week 2 vendor cards: map over vendors */}
         <div className="vendor-grid">
-          {Array.isArray(vendors) &&vendors.map((vendor) => (
+          {Array.isArray(vendors) && vendors.map((vendor) => (
             <VendorCard
               key={vendor.id}
               vendor={vendor}
@@ -141,12 +153,29 @@ function App() {
             />
           ))}
         </div>
+
+        {/* Dietary Tag Checkboxes placed cleanly inside the view render */}
+        <div style={{ display: 'flex', gap: '1rem', margin: '1rem 0', flexWrap: 'wrap', alignItems: 'center', background: '#fff', padding: '0.5rem 0.75rem', borderRadius: '8px', border: '1px solid #c5cbd3' }}>
+          <span style={{ fontWeight: 500, fontSize: '0.9rem' }}>Dietary tags:</span>
+          {['Vegetarian', 'Vegan', 'Dairy-Free', 'Gluten-Free', 'Nut-Free'].map((tag) => (
+            <label key={tag} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 400 }}>
+              <input
+                type="checkbox"
+                checked={selectedDietaryTags.includes(tag)}
+                onChange={() => handleToggleDietaryTag(tag)}
+              />
+              {tag}
+            </label>
+          ))}
+        </div>
+
         {selectedVendor && (
-          <MenuList items={selectedVendor.menu} onAdd={handleAddToCart} />
+          <MenuList items={filteredMenuItems} onAdd={handleAddToCart} />
         )}
       </>
     )
   }
+
   return (
     <>
       <Header
@@ -159,4 +188,5 @@ function App() {
     </>
   )
 }
+
 export default App
