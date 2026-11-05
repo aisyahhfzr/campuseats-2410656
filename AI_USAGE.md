@@ -20,3 +20,9 @@ Add a new section every week, before you tag. Did not use AI? Write "None" under
 - What I asked for: Code reconstruction, fixing errors and asked why there were errors
 - What I kept, changed or rejected, and why: I kept most things 
 - One thing the AI got wrong and how I fixed it: I tried to do search query but i didnt get
+
+## Week 4
+- Tools(s): Gemini
+- What I asked for: To help setting up React Router configuration,resolving the paths and how to implement the dietary tag changes
+- What I kept, changed or rejected, and why: react router, i changed dietary tag to use useSearchParams
+- One thing the AI got wrong and how I fixed it: the paths were mostly wrong so i checked my file catagories 
