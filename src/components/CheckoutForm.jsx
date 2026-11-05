@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
+import { useCart } from "../hooks/useCart.js";
 
 const MAHALLAHS = [
   "Ali",
@@ -9,35 +11,63 @@ const MAHALLAHS = [
   "Hafsa",
   "Uthman",
   "Zubair",
+  "Maryam",
 ];
 
+// A plain function: values in, errors object out. Empty object = valid.
 function validate(values) {
-  const errors = {}
+  const errors = {};
   if (values.name.trim().length < 3)
     errors.name = "Enter your name (at least 3 characters).";
-  if (!values.mahallah) errors.mahallah = "Please select a mahallah.";
+  if (!values.mahallah) errors.mahallah = "Choose your mahallah.";
   if (
     !values.pickupTime ||
     values.pickupTime < "07:00" ||
     values.pickupTime > "22:00"
   ) {
-    errors.pickupTime = "Pickup time must be between 07:00 and 22:00.";
+    errors.pickupTime = "Choose a pickup time between 07:00 and 22:00.";
   }
-  return errors
+  return errors;
 }
 
-function CheckoutForm({ onPlaceOrder }) {
+function CheckoutForm() {
   const [values, setValues] = useState({
     name: "",
     mahallah: "",
     pickupTime: "",
-  })
-  const [errors, setErrors] = useState({})
+  });
+  const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate();
+  const { placeOrder } = useCart();
+
+  // Feature 8: Suggest earliest pickup time (now + 20 minutes), refreshed every minute
+  useEffect(() => {
+    const calculateEarliestTime = () => {
+      const now = new Date();
+      now.setMinutes(now.getMinutes() + 20); // 20 minutes preparation time
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      return `${hours}:${minutes}`;
+    };
+
+    // Set initial pickup time on mount
+    setValues((prev) => ({ ...prev, pickupTime: calculateEarliestTime() }));
+
+    // Refresh every minute (60000 ms)
+    const timer = setInterval(() => {
+      setValues((prev) => ({ ...prev, pickupTime: calculateEarliestTime() }));
+    }, 60000);
+
+    // Cleanup interval on unmount
+    return () => clearInterval(timer);
+  }, []);
 
   // One handler for every input: the input's name matches a key in values.
+
   function handleChange(event) {
     const { name, value } = event.target;
-    setValues((prev) => ({ ...prev, [name]: value }))
+    setValues((prev) => ({ ...prev, [name]: value }));
   }
 
   function handleSubmit(event) {
@@ -45,7 +75,8 @@ function CheckoutForm({ onPlaceOrder }) {
     const found = validate(values);
     setErrors(found);
     if (Object.keys(found).length === 0) {
-      onPlaceOrder(values)
+      placeOrder(values);
+      navigate("/orders");
     }
   }
 
@@ -78,7 +109,7 @@ function CheckoutForm({ onPlaceOrder }) {
       </select>
       {errors.mahallah && <p className="field-error">{errors.mahallah}</p>}
 
-      <label htmlFor="pickupTime">Pickup Time</label>
+      <label htmlFor="pickupTime">Pickup time</label>
       <input
         type="time"
         id="pickupTime"
@@ -87,12 +118,11 @@ function CheckoutForm({ onPlaceOrder }) {
         onChange={handleChange}
       />
       {errors.pickupTime && <p className="field-error">{errors.pickupTime}</p>}
-
       <button type="submit" className="btn">
         Place order
       </button>
     </form>
-  )
+  );
 }
 
 export default CheckoutForm;

@@ -19,7 +19,7 @@
       {
         "id": "2410656-m2",
         "name": "Fried Noodles",
-        "description": "Fried noodles cooked in soy sauce",
+        "description": "Stir-fried noodles cooked in savory soy sauce",
         "price": 7,
         "category": "Noodles",
         "available": true,
@@ -29,9 +29,9 @@
       {
         "id": "2410656-m3",
         "name": "Curry Mee",
-        "description": "Noodles cooked in curry sauce",
+        "description": "Rich coconut curry soup with yellow noodles",
         "price": 15,
-        "category": "Drinks",
+        "category": "Noodles",
         "available": true,
         "popular": true,
         "tags": ["Dairy-Free", "Nut-Free"]
